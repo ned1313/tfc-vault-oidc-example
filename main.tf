@@ -1,5 +1,6 @@
-/*provider "vault" {
+provider "vault" {
   # Address from environment variable VAULT_ADDR
+  namespace = data.environment_variables.all.items["VAULT_NAMESPACE"]
   auth_login_jwt {
     mount = var.vault_auth_login_jwt_mount
     role  = var.vault_auth_login_jwt_role
@@ -10,7 +11,6 @@
 data "vault_generic_secret" "taco" {
   path = var.vault_secret_path
 }
-*/
 
 data "environment_variables" "all" {}
 
