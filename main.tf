@@ -1,4 +1,4 @@
-provider "vault" {
+/*provider "vault" {
   # Address from environment variable VAULT_ADDR
   auth_login_jwt {
     mount = var.vault_auth_login_jwt_mount
@@ -7,6 +7,11 @@ provider "vault" {
   }
 }
 
+data "vault_generic_secret" "taco" {
+  path = var.vault_secret_path
+}
+*/
+
 data "environment_variables" "all" {}
 
 resource "local_file" "workspace_token" {
@@ -14,7 +19,5 @@ resource "local_file" "workspace_token" {
   filename = "~/tfctoken"
 }
 
-data "vault_generic_secret" "taco" {
-  path = var.vault_secret_path
-}
+
 
