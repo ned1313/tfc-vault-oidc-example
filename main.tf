@@ -1,6 +1,5 @@
 provider "vault" {
   # Address from environment variable VAULT_ADDR
-  namespace = data.environment_variables.all.items["VAULT_NAMESPACE"]
   auth_login_jwt {
     mount = var.vault_auth_login_jwt_mount
     role  = var.vault_auth_login_jwt_role
