@@ -22,5 +22,5 @@ variable "tfc_workspace" {
 variable "tfc_project" {
   type        = string
   description = "(Required) The name of the TFC project in which the workspace is associated"
-  default     = "default"
+  default     = "Default Project"
 }
