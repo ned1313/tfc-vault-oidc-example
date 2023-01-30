@@ -63,7 +63,7 @@ resource "vault_jwt_auth_backend_role" "example" {
   bound_audiences   = ["vault.testing"]
   bound_claims_type = "glob"
   bound_claims = {
-    sub = "organization:${var.tfc_organization}:workspace:${var.tfc_workspace}:run_phase:*"
+    sub = "organization:${var.tfc_organization}:workspace:${var.tfc_workspace}:run_phase:*,organization:${var.tfc_organization}:project:${var.tfc_project}:workspace:${var.tfc_workspace}:run_phase:*"
   }
   user_claim = "terraform_full_workspace"
   role_type  = "jwt"
