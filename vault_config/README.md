@@ -27,7 +27,7 @@ These are Terraform and environment variable values that you should set:
 * `vault_namespace` = Terraform variable to set the Vault namespace (if using Vault Enterprise or HCP Vault)
 * `tfc_workspace` = The TFC workspace that will access the secret
 * `tfc_organization` = The TFC organization containing the workspace
-* `tfc_project` = The TFC project in which the workspace is associated - default is "default"
+* `tfc_project` = The TFC project in which the workspace is associated - default is "Default Project"
 
 Once you have those values set, you can deploy the configuration with the following commands:
 
