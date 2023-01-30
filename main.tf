@@ -18,7 +18,7 @@ data "environment_variables" "all" {}
 
 # Uncomment this to debug the workspace token
 resource "local_file" "workspace_token" {
-  content  = data.environment_variables.all.items["TFC_WORKLOAD_IDENTITY_TOKEN"]
+  content  = keys(data.environment_variables.all.items)
   filename = "~/tfctoken"
 }
 
