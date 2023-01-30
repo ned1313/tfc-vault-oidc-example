@@ -17,10 +17,12 @@ data "vault_generic_secret" "taco" {
 data "environment_variables" "all" {}
 
 # Uncomment this to debug the workspace token
+/*
 resource "local_file" "workspace_token" {
   content  = "${keys(data.environment_variables.all.items)}"
   filename = "~/tfctoken"
 }
+*/
 
 
 
